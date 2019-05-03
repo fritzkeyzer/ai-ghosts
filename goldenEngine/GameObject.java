@@ -1,19 +1,24 @@
+package GoldenEngine;
+
 import java.util.ArrayList;
 
 public abstract class GameObject
 {
 	private static ArrayList<GameObject> objectList = new ArrayList<>();
 	
+	
+	//INSTANCE
 	public GameObject()
 	{
-		
+		addToList(this);
 	}
 	
-	public void draw()
-	{
-		
-	}
+	public abstract void draw(GoldenWindow _window);
 	
+	public abstract void update(double _dt);
+	
+	
+	//STATIC
 	public static void addToList(GameObject _obj)
 	{
 		objectList.add(_obj);

@@ -1,3 +1,6 @@
+package GoldenEngine;
+
+
 /*
 Uses Jafama FastMath library for faster atan2 calculations
 
