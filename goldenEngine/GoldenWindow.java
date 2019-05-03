@@ -1,3 +1,6 @@
+package GoldenEngine;
+
+
 /*
 
 https://www.gamedev.net/articles/programming/general-and-gameplay-programming/java-games-active-rendering-r2418
@@ -62,7 +65,7 @@ import javax.swing.KeyStroke;
 
 
 
-public class MyWindow implements ActionListener, MouseListener, MouseMotionListener, KeyListener  {
+public class GoldenWindow implements ActionListener, MouseListener, MouseMotionListener, KeyListener  {
 	
 	//***************** Private Variables
 	private String title = "";
@@ -139,7 +142,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 	
 	
 	//***************** Constructor
-	public MyWindow(String _title){
+	public GoldenWindow(String _title){
 		title = _title;
 		init();
 	}
@@ -167,14 +170,14 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 
         // in case file is inside a .jar (classpath relative to FritzStdDraw)
         if ((icon == null) || (icon.getImageLoadStatus() != MediaTracker.COMPLETE)) {
-            URL url = MyWindow.class.getResource(filename);
+            URL url = GoldenWindow.class.getResource(filename);
             if (url != null)
                 icon = new ImageIcon(url);
         }
         
         // in case file is inside a .jar (classpath relative to root of jar)
         if ((icon == null) || (icon.getImageLoadStatus() != MediaTracker.COMPLETE)) {
-            URL url = MyWindow.class.getResource("/" + filename);
+            URL url = GoldenWindow.class.getResource("/" + filename);
             if (url == null) throw new IllegalArgumentException("image " + filename + " not found");
             icon = new ImageIcon(url);
         }
@@ -371,7 +374,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 			g2d.fillRect( 0, 0, width, height);
 		}
 		catch(Exception e){
-			error("MyWindow: clear()");
+			error("GoldenWindow: clear()");
 		}
 	}
 	
@@ -394,7 +397,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 			g2d.fillRect( 0, 0, width, height);
 		}
 		catch(Exception e){
-			error("MyWindow: clear()");
+			error("GoldenWindow: clear()");
 		}
 	}
 	
@@ -424,7 +427,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 			Thread.yield();
 		}
 		catch(Exception e){
-			error("MyWindow: show()");
+			error("GoldenWindow: show()");
 		}
 		finally {
 			// release resources
@@ -932,7 +935,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 	//***************** Main
 	public static void main( String[] args ) {
 		
-		MyWindow bleh = new MyWindow("my window");
+		GoldenWindow bleh = new GoldenWindow("my window");
 		
 		//bleh.setIcon("1.png");
 		
@@ -966,7 +969,7 @@ public class MyWindow implements ActionListener, MouseListener, MouseMotionListe
 					}
 				}
 				catch(Exception e){
-					error("MyWindow: sommin()");
+					error("GoldenWindow: sommin()");
 				}
 			}
 			else {
