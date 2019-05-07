@@ -24,12 +24,10 @@ public class Game
 		}
 		
 		window.clear();
-		
 		for (GameObject obj : objList)
 		{
 			obj.draw(window);
 		}
-		
 		window.show();
 	}
 	

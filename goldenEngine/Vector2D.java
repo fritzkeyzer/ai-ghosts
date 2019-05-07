@@ -120,6 +120,10 @@ public class Vector2D{
 	//********** Public non-static methods
 	public Vector2D unit(){
 		double mag = mag();
+		if (mag == 0)
+		{
+			return new Vector2D(0, 0);
+		}
 		return new Vector2D(x/mag, y/mag);
 	}
 	
