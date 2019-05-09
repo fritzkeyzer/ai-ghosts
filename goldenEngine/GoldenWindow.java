@@ -190,10 +190,10 @@ public class GoldenWindow implements ActionListener, MouseListener, MouseMotionL
 	}
 	
 	// helper functions that scale from user coordinates to screen coordinates and back
-    private double  scaleX(double x) { return width  * ((x - xmin) / (xmax - xmin)); }
-    private double  scaleY(double y) { return height * ((ymax - y) / (ymax - ymin)); }
-    private double factorX(double w) { return width * (w / Math.abs(xmax - xmin));  }
-    private double factorY(double h) { return height * (h/ Math.abs(ymax - ymin));  }
+    private double  scaleX(double x) { return width  * ((x - xmin) / (xmax - xmin));}
+    private double  scaleY(double y) { return height * ((ymax - y) / (ymax - ymin));}
+    private double factorX(double w) { return width  * (w / Math.abs(xmax - xmin));}
+    private double factorY(double h) { return height * (h / Math.abs(ymax - ymin));}
     private double   userX(double x) { return xmin + x * (xmax - xmin) / width;    }
     private double   userY(double y) { return ymax - y * (ymax - ymin) / height;   }
 	

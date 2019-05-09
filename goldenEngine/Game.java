@@ -18,17 +18,21 @@ public class Game
 		
 		ArrayList<GameObject> objList = GameObject.getObjectList();
 		
+		
+		
+		window.clear();
 		for (GameObject obj : objList)
 		{
 			obj.update(dt);
 		}
 		
-		window.clear();
+		
 		for (GameObject obj : objList)
 		{
 			obj.draw(window);
 		}
 		window.show();
+		
 	}
 	
 	public static GoldenWindow window()
