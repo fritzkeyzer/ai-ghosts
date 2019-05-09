@@ -27,6 +27,8 @@ public class Vector2D{
 	public static final double halfPi = 0.5*Math.PI;
 	public static final double twoPi = 2*Math.PI;
 	
+	public static final Vector2D zero = new Vector2D(0,0);
+	
 	public Vector2D(double _x, double _y){
 		x = _x;
 		y = _y;

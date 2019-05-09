@@ -91,7 +91,7 @@ public class PlayerInput
 	
 	public static Vector2D getMovementVector()
 	{
-		Vector2D move = Vector2D.zero();
+		Vector2D move = Vector2D.zero;
 		
 		if (up() || walkUp())
 		{
